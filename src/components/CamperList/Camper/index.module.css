@@ -10,13 +10,13 @@
     background: #FFF;
 }
 
-.contant {
+.cardContent {
     display: flex;
     align-items: flex-start;
     gap: 24px;
 }
 
-.image {
+.cardImage {
     width: 290px;
     height: 310px;
     overflow: hidden;
@@ -24,6 +24,12 @@
     flex-shrink: 0;
     border-radius: 10px;
     background: lightgray no-repeat;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
 }
 
 img {
@@ -44,17 +50,77 @@ img {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+    width: 100%;
 }
 
-.horizontalContainer {
+.header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 248px;
     align-self: stretch;
 }
 
-.section {
+.headerLeft {
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+}
+
+.title {
+    color: #101828;
+    
+    /* H1 */
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    /* 125% */
+}
+
+.price {
+    color: #101828;
+
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    /* 125% */
+}
+
+.ratingIcon {
+    width: 16px;
+    height: 16px;
+ }
+
+.rating {
+    color: #101828;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    text-decoration-line: underline;
+}
+
+.location {
+    color: #101828;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+}
+
+.favIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.additionalInfo {
     display: flex;
     align-items: flex-start;
     gap: 16px;

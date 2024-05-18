@@ -13,10 +13,10 @@ export default function CategoryList({ list }) {
   console.log(category);
 
   return (
-    <ul className={css.categories}>
+    <div className={css.categories}>
       {Object.entries(category).map((el) => (
         <CategoryItem label={el[0]} value={el[1]} key={el[0]} />
       ))}
-    </ul>
+    </div>
   );
 }

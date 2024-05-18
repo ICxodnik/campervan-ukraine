@@ -1,26 +1,37 @@
 import css from "./index.module.css";
 
+function prepareValue(value, label) {
+  //label not important
+  if (Number.isNaN(parseFloat(value))) {
+    return {
+      icon: value,
+      text: value,
+    };
+  }
+  //value not important
+  if (value === 1) {
+    return {
+      icon: label,
+      text: label,
+    };
+  }
+  return {
+    icon: label,
+    text: value + " " + label,
+  };
+}
+
 export default function CategoryItem({ value, label }) {
-  let icon = label;
-  if (value === 0) {
-    //not included
+  if (!value) {
     return null;
   }
-  if (value === 1) {
-    //show is included
-    value = "";
-  }
-  if (isNaN(value)) {
-    //show type
-    label = "";
-    icon = value;
-  }
+  const displayData = prepareValue(value, label);
   return (
     <div className={css.categories}>
       <svg className={css.categoriesIcon}>
-        <use xlinkHref={"icons.svg#icon-" + icon}></use>
+        <use xlinkHref={"icons.svg#icon-" + displayData.icon}></use>
       </svg>
-      {value} {label}
+      {displayData.text}
     </div>
   );
 }
