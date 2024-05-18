@@ -1,10 +1,38 @@
-import React from 'react';
+import React, { Suspense }  from 'react';
 // import { Counter } from './features/counter/Counter';
+import { Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
+import Loader from './components/Loader';
+import Home from './pages/Home';
+import Catalog from './pages/Catalog';
+import Favorites from './pages/Favorites';
 
 function App() {
   return (
-    <div className="App">
+    <div className="mainPage">
+      <nav>
+        <NavLink className="navLink" to="/" end>
+          Home
+        </NavLink>
+        <NavLink className="navLink" to="/catalog">
+          Catalog
+        </NavLink>
+        <NavLink className="navLink" to="/favorites">
+          Favorites ♥
+        </NavLink>
+      </nav>
+
+      <Suspense fallback={<Loader hide={false} />}>
+        <Routes>
+          <Route path="catalog" element={<Catalog />}>
+            <Route path="camperId" element={<Catalog />} />
+          </Route>
+          <Route path="favorites" element={<Favorites />}>
+            <Route path="camperId" element={<Favorites />} />
+          </Route>
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }
