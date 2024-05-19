@@ -35,3 +35,11 @@ h3 {
   margin: 0;
   padding: 0;
 }
+
+/* TODO */
+svg {
+    fill: transparent;
+    stroke: #101828;
+    height: 32px;
+    width: 32px;
+}
