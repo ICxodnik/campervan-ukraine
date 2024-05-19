@@ -11,3 +11,10 @@
         padding: 50px 32px;
     }
 }
+
+@media (max-width: 850px) {
+    .page {
+        display: flex;
+        flex-direction: column;
+    }
+}

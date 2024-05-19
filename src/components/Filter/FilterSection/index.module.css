@@ -34,13 +34,26 @@
 .filterButtonContainer {
     display: grid;
     gap: 10px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
+}
+
+@media (min-width: 850px) {
+    .filterButtonContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .filterButtonContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .filterButton {
     position: relative;
     height: 95px;
+    min-width: 95px;
     padding: 12px;
 
     display: flex;
