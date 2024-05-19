@@ -4,3 +4,10 @@
     gap: 64px;
     padding: 100px 64px;
 }
+
+@media (max-width: 1250px) {
+    .page {
+        gap: 32px;
+        padding: 50px 32px;
+    }
+}
