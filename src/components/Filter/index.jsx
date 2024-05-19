@@ -1,3 +1,4 @@
+import FilterSection from "./FilterSection";
 import css from "./index.module.css";
 
 const filterEquipment = [
@@ -18,7 +19,7 @@ const filterEquipment = [
   },
   {
     name: "TV",
-    icon: "tv",
+    icon: "TV",
     isSelected: false,
   },
   {
@@ -65,35 +66,8 @@ export default function Filter(props) {
       </div>
       <div className={css.filterDepartment}>
         <div className={css.title}>Filters</div>
-        <div className={css.filterSection}>
-          <div className={css.subTitle}>Vehicle Equipment</div>
-          <div className={css.line}></div>
-          <div className={css.filterButtonContainer}>
-            {filterEquipment.map((el) => (
-              <div className={css.filterButton}>
-                <svg className={css.filterIcon}>
-                  <use xlinkHref={"icons.svg#icon-" + el.icon}></use>
-                </svg>
-                {el.name}
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className={css.filterSection}>
-          <div className={css.subTitle}>Vehicle Type</div>
-          <div className={css.line}></div>
-
-          <div className={css.filterButtonContainer}>
-            {filterType.map((el) => (
-              <div className={css.filterButton}>
-                <svg className={css.filterIcon}>
-                  <use xlinkHref={"icons.svg#icon-" + el.icon}></use>
-                </svg>
-                {el.name}
-              </div>
-            ))}
-          </div>
-        </div>
+        <FilterSection title="Vehicle Equipment" filters={filterEquipment} />
+        <FilterSection title="Vehicle Type" filters={filterType} />
       </div>
     </div>
   );
