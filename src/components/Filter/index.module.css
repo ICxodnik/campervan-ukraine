@@ -1,0 +1,108 @@
+.filter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: stretch;
+}
+
+.title {
+    color: rgba(16, 24, 40, 0.60);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 8px;;
+    /* 150% */
+}
+
+.subTitle {
+    color: #101828;
+
+    /* H2 */
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    /* 120% */
+}
+
+.filterButtonContainer {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.filterButton {
+    height: 95px;
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border-radius: 10px;
+    border: 1px solid rgba(16, 24, 40, 0.20);
+    mix-blend-mode: multiply;
+}
+
+.filterButtonText {
+    color: #101828;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 125% */
+}
+
+.filterSection {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    /* collapse margin */
+    margin: 14px 0; 
+}
+
+.input {
+    width: 100%;
+    border-radius: 10px;
+    background: #F7F7F7;
+    padding: 18px;
+    padding-left: 50px;
+    border: unset;
+}
+
+.inputContainer {
+    position:relative;
+    color: rgba(16, 24, 40, 0.60);
+}
+
+.inputIcon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 18px;
+    height: 20px;
+
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    /* collapse margin */
+    margin: 24px 0;
+    background-color: rgba(16, 24, 40, 0.10);
+}
+
+.filterIcon {
+    width: 32px;
+    height: 32px;
+}
