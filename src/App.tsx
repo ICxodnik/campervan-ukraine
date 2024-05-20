@@ -32,13 +32,13 @@ function App() {
 
       <Suspense fallback={<Loader hide={false} />}>
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="catalog" element={<Catalog />}>
             <Route path=":camperId" element={<Catalog />} />
           </Route>
           <Route path="favorites" element={<Favorites />}>
             <Route path="camperId" element={<Favorites />} />
           </Route>
+          <Route path="/" element={<Home />} />
           <Route path="*" element={<Navigate to="/" replace={true} />} />
         </Routes>
       </Suspense>
