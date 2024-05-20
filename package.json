@@ -2,6 +2,7 @@
   "name": "campervan-ukraine",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ICxodnik.github.io/campervan-ukraine/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.17.0",
