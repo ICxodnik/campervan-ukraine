@@ -9,14 +9,13 @@
 }
 
 .gallery {
-    display: flex;
-    flex-direction: row;
+    display: grid;
     gap: 16px;
-
+    justify-content: stretch;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .cardImage {
-    width: 290px;
     height: 310px;
     overflow: hidden;
     object-fit: contain;
