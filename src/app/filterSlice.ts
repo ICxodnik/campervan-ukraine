@@ -8,12 +8,15 @@ export interface Filter {
 }
 
 export interface Equipment {
+  keys: string[];
   name: "AC" | "Automatic" | "Kitchen" | "TV" | "Shower/WC";
+  value?: string;
   icon: string;
   isSelected: boolean;
 }
 
 export interface Type {
+  key: "alcove" | "fullyIntegrated" | "panelTruck";
   name: "Van" | "Fully Integrated" | "Alcove";
   icon: string;
   isSelected: boolean;
@@ -21,26 +24,32 @@ export interface Type {
 
 const filterEquipment: Array<Equipment> = [
   {
+    keys: ["airConditioner"],
     name: "AC",
     icon: "ac",
     isSelected: false,
   },
   {
+    keys: ["transmission"],
+    value: "automatic",
     name: "Automatic",
     icon: "transmission",
     isSelected: false,
   },
   {
+    keys: ["kitchen"],
     name: "Kitchen",
     icon: "kitchen",
     isSelected: false,
   },
   {
+    keys: ["TV"],
     name: "TV",
     icon: "TV",
     isSelected: false,
   },
   {
+    keys: ["shower", "toilet"],
     name: "Shower/WC",
     icon: "shower",
     isSelected: false,
@@ -48,16 +57,19 @@ const filterEquipment: Array<Equipment> = [
 ];
 const filterType: Array<Type> = [
   {
+    key: "panelTruck",
     name: "Van",
     icon: "panelTruck",
     isSelected: false,
   },
   {
+    key: "fullyIntegrated",
     name: "Fully Integrated",
     icon: "fullyIntegrated",
     isSelected: false,
   },
   {
+    key: "alcove",
     name: "Alcove",
     icon: "alcove",
     isSelected: false,

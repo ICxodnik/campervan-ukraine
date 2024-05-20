@@ -3,9 +3,7 @@ import css from "./index.module.css";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import {
   selectEquipment,
-  unselectEquipment,
   selectType,
-  unselectType,
   setLocation,
   selectFilterEquipment,
   selectFilterLocation,
