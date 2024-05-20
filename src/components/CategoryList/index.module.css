@@ -9,6 +9,8 @@
 .showMore {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     width: 100%;
+    font-size: 12;
+    color: gray;
 }
