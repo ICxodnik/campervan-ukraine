@@ -1,18 +1,26 @@
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 20px 20px 20px 20px;
-  background-color: rgb(231, 230, 226);
+  background: rgb(249, 249, 249);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  gap: 25px;
 }
 
 .navLink {
   text-decoration: none;
-  color: rgb(111, 110, 108);
+  color: rgb(98, 103, 104);
   font-weight: bold;
   font-size: 16px;
 }
 
 .navLink.active {
-  color: rgb(96, 47, 25);
+  color: rgb(14, 46, 53);
+}
+
+.secondWordLogo {
+  font-size: 25px;
+  margin-right: 50px;
 }

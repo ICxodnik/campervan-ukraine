@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect } from "react";
 // import { Counter } from './features/counter/Counter';
-import { Routes, Route, NavLink, Navigate } from "react-router-dom";
+import { Routes, Route, NavLink, Navigate, Link } from "react-router-dom";
 import "./App.css";
 import Loader from "./components/Loader";
 import Home from "./pages/Home";
@@ -19,14 +19,17 @@ function App() {
   return (
     <div className="mainPage">
       <nav>
-        <NavLink className="navLink" to="/" end>
+        <Link className="navLink" to="/">
+          <span className="secondWordLogo">Campervan</span>
+        </Link>
+        <NavLink className="navLink" to="/">
           Home
         </NavLink>
         <NavLink className="navLink" to="/catalog">
           Catalog
         </NavLink>
         <NavLink className="navLink" to="/favorites">
-          Favorites ♥
+          Favorites
         </NavLink>
       </nav>
 
