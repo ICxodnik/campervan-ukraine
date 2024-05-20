@@ -8,7 +8,6 @@ const getFilters = (state: RootState) => state.filter;
 export const getCampers = createSelector(
   [getAllCampers, getFavoritesCampers],
   (campers, favorites) => {
-    // TODO: filter campers
     const favIds = new Set(favorites);
 
     return campers.map((el) => ({

@@ -6,5 +6,9 @@ import css from "./index.module.css";
 export default function Favorites() {
   const favorites = useAppSelector(getFavCampers);
 
-  return <CamperList campers={favorites} />;
+  return (
+    <div className={css.favPage}>
+      <CamperList campers={favorites} />
+    </div>
+  );
 }

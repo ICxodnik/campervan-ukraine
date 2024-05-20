@@ -2,8 +2,6 @@ import CategoryItem from "./CategoryItem";
 import css from "./index.module.css";
 
 export default function CategoryList({ details }) {
-  console.log(details);
-
   return (
     <div className={css.categories}>
       {details.map((el) => (

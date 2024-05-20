@@ -1,16 +1,6 @@
-import { useAppDispatch } from "../../../app/hooks";
 import css from "./index.module.css";
 import cx from "classnames";
-import {
-  selectEquipment,
-  selectType,
-  setLocation,
-  selectFilterEquipment,
-  selectFilterLocation,
-  selectFilterType,
-  Equipment,
-  Type,
-} from "../../../app/filterSlice";
+import { Equipment, Type } from "../../../app/filterSlice";
 
 interface Props {
   title: string;
