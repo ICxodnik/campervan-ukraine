@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect } from "react";
 // import { Counter } from './features/counter/Counter';
-import { Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route, NavLink, Navigate } from "react-router-dom";
 import "./App.css";
 import Loader from "./components/Loader";
 import Home from "./pages/Home";
@@ -32,13 +32,14 @@ function App() {
 
       <Suspense fallback={<Loader hide={false} />}>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="catalog" element={<Catalog />}>
-            <Route path="camperId" element={<Catalog />} />
+            <Route path=":camperId" element={<Catalog />} />
           </Route>
           <Route path="favorites" element={<Favorites />}>
             <Route path="camperId" element={<Favorites />} />
           </Route>
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<Navigate to="/" replace={true} />} />
         </Routes>
       </Suspense>
     </div>
