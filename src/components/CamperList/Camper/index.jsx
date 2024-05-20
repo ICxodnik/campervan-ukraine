@@ -6,7 +6,7 @@ export default function CamperItem({ el }) {
     <div className={css.card}>
       <div className={css.cardContent}>
         <div className={css.cardImage}>
-          <img src={el.gallery && el.gallery[0]} alt={el.name} />
+          <img src={el.galleryUrls[0]} alt={el.name} />
         </div>
         <div className={css.cardDetails}>
           <div className={css.container}>
@@ -41,7 +41,7 @@ export default function CamperItem({ el }) {
           </div>
           <div className={css.supportingText}>{el.description}</div>
 
-          <CategoryList list={el} />
+          <CategoryList details={el.details} />
           <button className={css.accentButton}>Show more</button>
         </div>
       </div>

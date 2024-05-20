@@ -1,13 +1,21 @@
-import React, { Suspense }  from 'react';
+import React, { Suspense, useEffect } from "react";
 // import { Counter } from './features/counter/Counter';
-import { Routes, Route, NavLink } from 'react-router-dom';
-import './App.css';
-import Loader from './components/Loader';
-import Home from './pages/Home';
-import Catalog from './pages/Catalog';
-import Favorites from './pages/Favorites';
+import { Routes, Route, NavLink } from "react-router-dom";
+import "./App.css";
+import Loader from "./components/Loader";
+import Home from "./pages/Home";
+import Catalog from "./pages/Catalog";
+import Favorites from "./pages/Favorites";
+import { useAppDispatch } from "./app/hooks";
+import { loadAction } from "./features/camper/camperSlice";
 
 function App() {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(loadAction());
+  });
+
   return (
     <div className="mainPage">
       <nav>

@@ -1,21 +1,13 @@
 import CategoryItem from "./CategoryItem";
 import css from "./index.module.css";
 
-export default function CategoryList({ list }) {
-  console.log(list);
-  const category = {
-    ...list.details,
-    adults: list.adults,
-    children: list.children,
-    engine: list.engine,
-    transmission: list.transmission,
-  };
-  console.log(category);
+export default function CategoryList({ details }) {
+  console.log(details);
 
   return (
     <div className={css.categories}>
-      {Object.entries(category).map((el) => (
-        <CategoryItem label={el[0]} value={el[1]} key={el[0]} />
+      {details.map((el) => (
+        <CategoryItem key={el.id} label={el.id} value={el.value} />
       ))}
     </div>
   );

@@ -1,12 +1,14 @@
 import css from "./index.module.css";
-import camperList from "../../services/camper.json";
 import CamperItem from "./Camper";
+import { useAppSelector } from "../../app/hooks";
+import { getCampers } from "../../app/selectors";
 
 export default function CamperList() {
+  const campers = useAppSelector(getCampers);
   return (
     <div className={css.list}>
-      {camperList.map((el) => (
-        <CamperItem el={el} key={el._id} />
+      {campers.map((el) => (
+        <CamperItem el={el} key={el.id} />
       ))}
     </div>
   );
