@@ -44,14 +44,12 @@ function prepareDetails(camper: any): CamperDetail[] {
     ["transmission", camper.transmission],
   ].concat(Object.entries(camper.details));
 
-  return details.map(([id, value]) => {
-    return {
-      id,
-      value,
-    };
-  });
-}
-
-function capitalize(str: string) {
-  return str[0].toUpperCase() + str.substring(1);
+  return details
+    .map(([id, value]) => {
+      return {
+        id,
+        value,
+      };
+    })
+    .filter((detail) => detail.value !== 0);
 }
