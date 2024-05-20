@@ -5,7 +5,9 @@ export default function CamperItemDetails({ el, showModal }) {
   return (
     <div className={css.cardContent}>
       <div className={css.header}>
-        <div className={css.title}>{el.name}</div>
+        <div className={css.title}>
+          <h1>{el.name}</h1>
+        </div>
         <div className={css.additionalInfo}>
           <div className={css.text}>
             <svg className={css.favIcon}>

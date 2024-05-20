@@ -15,7 +15,9 @@ export default function CamperItem({ el, showModal }) {
         <div className={css.cardDetails}>
           <div className={css.container}>
             <div className={css.header}>
-              <div className={css.title}>{el.name}</div>
+              <div className={css.title}>
+                <h1>{el.name}</h1>
+              </div>
               <div className={css.headerLeft}>
                 <div className={css.price}>
                   €{el.price.toFixed(2).toLocaleString()}

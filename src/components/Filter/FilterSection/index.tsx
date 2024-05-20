@@ -11,7 +11,9 @@ interface Props {
 export default function FilterSection({ title, filters, onSelect }: Props) {
   return (
     <div className={css.filterSection}>
-      <div className={css.subTitle}>{title}</div>
+      <div className={css.subTitle}>
+        <h2>{title}</h2>
+      </div>
       <div className={css.line}></div>
       <div className={css.filterButtonContainer}>
         {filters.map((el) => (

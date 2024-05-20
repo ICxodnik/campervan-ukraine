@@ -5,6 +5,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  color: #101828;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -91,6 +92,18 @@ h2,
 h3 {
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
 }
 
 /* TODO */
