@@ -5,3 +5,10 @@
     align-self: stretch;
     flex-wrap: wrap;
 }
+
+.showMore {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+}

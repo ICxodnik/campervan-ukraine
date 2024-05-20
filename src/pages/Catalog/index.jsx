@@ -18,7 +18,7 @@ export default function Catalog() {
       {pageInfo.hasNextPage && (
         <div className={css.footer}>
           <button className="button" onClick={() => dispatch(nextPage())}>
-            Show more
+            Load more
           </button>
         </div>
       )}
