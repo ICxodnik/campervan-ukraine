@@ -1,0 +1,44 @@
+.imageWrapper {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+}
+
+.logo {
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  padding: 15px;
+}
+
+.title {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  color: white;
+  margin-left: 100px;
+}
+.bigTitle {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  color: white;
+}
+
+.combineTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}

@@ -23,4 +23,7 @@ nav {
 .secondWordLogo {
   font-size: 25px;
   margin-right: 50px;
+  font-weight: 400;
+    font-style: normal;
+    font-family: "Poetsen One", sans-serif;
 }
