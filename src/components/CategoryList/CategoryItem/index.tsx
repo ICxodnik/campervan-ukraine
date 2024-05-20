@@ -4,25 +4,19 @@ const mapping: Record<
   string,
   (label: string, value: string | number) => string
 > = {
-  adults: combined,
-  children: combined,
   engine: capitalizeValue,
   transmission: capitalizeValue,
   airConditioner: () => "AC",
-  bathroom: combined,
-  kitchen: capitalizeLabel,
   beds: combined,
-  TV: capitalizeLabel,
-  CD: capitalizeLabel,
-  radio: capitalizeLabel,
-  shower: capitalizeLabel,
-  toilet: capitalizeLabel,
-  freezer: capitalizeLabel,
-  hob: combined,
-  microwave: capitalizeLabel,
-  gas: combined,
-  water: combined,
 };
+
+function genericLabel(label: string, value: number | string) {
+  // eslint-disable-next-line eqeqeq
+  if (value == 1) {
+    return capitalizeLabel(label);
+  }
+  return combined(label, value);
+}
 
 function combined(label: string, value: number | string) {
   return `${value} ${label}`;
@@ -42,7 +36,9 @@ function prepareValue(id: string, value: any) {
   return {
     id,
     text:
-      typeof textMapper === "function" ? textMapper(id, value) : (value as any),
+      typeof textMapper === "function"
+        ? textMapper(id, value)
+        : genericLabel(id, value),
     icon: id,
   };
 }
