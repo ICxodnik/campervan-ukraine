@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import * as api from "../../services/api";
+import * as api from "../services/api";
 
 export interface CamperDetail {
   id: string;

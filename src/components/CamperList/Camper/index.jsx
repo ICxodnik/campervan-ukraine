@@ -1,5 +1,5 @@
 import { useAppDispatch } from "../../../app/hooks";
-import { toggleFavorite } from "../../../features/camper/camperSlice";
+import { toggleFavorite } from "../../../app/camperSlice";
 import CategoryList from "../../CategoryList";
 import css from "./index.module.css";
 

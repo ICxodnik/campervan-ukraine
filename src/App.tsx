@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
 import Favorites from "./pages/Favorites";
 import { useAppDispatch } from "./app/hooks";
-import { loadAction } from "./features/camper/camperSlice";
+import { loadAction } from "./app/camperSlice";
 
 function App() {
   const dispatch = useAppDispatch();

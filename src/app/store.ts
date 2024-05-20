@@ -1,11 +1,13 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import counterReducer from "../features/counter/counterSlice";
-import camperReducer from "../features/camper/camperSlice";
+import camperReducer from "./camperSlice";
+import filterReducer from "./filterSlice";
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
     campers: camperReducer,
+    filter: filterReducer,
   },
 });
 

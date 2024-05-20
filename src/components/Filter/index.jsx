@@ -1,52 +1,23 @@
 import FilterSection from "./FilterSection";
 import css from "./index.module.css";
-
-const filterEquipment = [
-  {
-    name: "AC",
-    icon: "ac",
-    isSelected: false,
-  },
-  {
-    name: "Automatic",
-    icon: "transmission",
-    isSelected: false,
-  },
-  {
-    name: "Kitchen",
-    icon: "kitchen",
-    isSelected: false,
-  },
-  {
-    name: "TV",
-    icon: "TV",
-    isSelected: false,
-  },
-  {
-    name: "Shower/WC",
-    icon: "shower",
-    isSelected: false,
-  },
-];
-const filterType = [
-  {
-    name: "Van",
-    icon: "panelTruck",
-    isSelected: false,
-  },
-  {
-    name: "Fully Integrated",
-    icon: "fullyIntegrated",
-    isSelected: false,
-  },
-  {
-    name: "Alcove",
-    icon: "alcove",
-    isSelected: false,
-  },
-];
+import { useAppSelector, useAppDispatch } from "../../app/hooks";
+import {
+  selectEquipment,
+  unselectEquipment,
+  selectType,
+  unselectType,
+  setLocation,
+  selectFilterEquipment,
+  selectFilterLocation,
+  selectFilterType,
+} from "../../app/filterSlice";
 
 export default function Filter(props) {
+  const filterEquipment = useAppSelector(selectFilterEquipment);
+  const filterType = useAppSelector(selectFilterType);
+  const location = useAppSelector(selectFilterLocation);
+  const dispatch = useAppDispatch();
+
   return (
     <div className={css.filter}>
       <div className={css.filterDepartment}>
@@ -66,8 +37,16 @@ export default function Filter(props) {
       </div>
       <div className={css.filterDepartment}>
         <div className={css.title}>Filters</div>
-        <FilterSection title="Vehicle Equipment" filters={filterEquipment} />
-        <FilterSection title="Vehicle Type" filters={filterType} />
+        <FilterSection
+          title="Vehicle Equipment"
+          onSelect={(id) => dispatch(selectEquipment(id))}
+          filters={filterEquipment}
+        />
+        <FilterSection
+          title="Vehicle Type"
+          filters={filterType}
+          onSelect={(id) => dispatch(selectType(id))}
+        />
       </div>
     </div>
   );

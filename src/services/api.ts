@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Camper, CamperDetail, Review } from "../features/camper/camperSlice";
+import { Camper, CamperDetail, Review } from "../app/camperSlice";
 
 const client = axios.create({
   baseURL: process.env.REACT_APP_CAMPER_API,
