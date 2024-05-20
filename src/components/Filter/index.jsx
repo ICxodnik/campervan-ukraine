@@ -30,6 +30,8 @@ export default function Filter(props) {
             type="search"
             name="searchLocation"
             id="searchLocation"
+            value={location}
+            onChange={(e) => dispatch(setLocation(e.currentTarget.value))}
           />
         </div>
       </div>

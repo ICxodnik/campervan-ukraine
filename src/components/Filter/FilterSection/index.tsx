@@ -18,10 +18,6 @@ interface Props {
   onSelect: (id: string) => void;
 }
 
-//TODO
-//distinct filters
-//distinct actions
-//add several classes
 export default function FilterSection({ title, filters, onSelect }: Props) {
   return (
     <div className={css.filterSection}>
