@@ -1,7 +1,11 @@
+import { useAppDispatch } from "../../../app/hooks";
+import { toggleFavorite } from "../../../features/camper/camperSlice";
 import CategoryList from "../../CategoryList";
 import css from "./index.module.css";
 
 export default function CamperItem({ el, showModal }) {
+  const dispatch = useAppDispatch();
+
   return (
     <div className={css.card}>
       <div className={css.cardContent}>
@@ -16,9 +20,15 @@ export default function CamperItem({ el, showModal }) {
                 <div className={css.price}>
                   €{el.price.toFixed(2).toLocaleString()}
                 </div>
-                <svg className={css.favIcon}>
-                  <use xlinkHref="icons.svg#icon-heart"></use>
-                  <use xlinkHref="icons.svg#icon-fav_heart"></use>
+                <svg
+                  className={css.favIcon}
+                  onClick={() => dispatch(toggleFavorite(el.id))}
+                >
+                  <use
+                    xlinkHref={
+                      "icons.svg#icon-" + (el.isFav ? "fav_heart" : "heart")
+                    }
+                  ></use>
                 </svg>
               </div>
             </div>

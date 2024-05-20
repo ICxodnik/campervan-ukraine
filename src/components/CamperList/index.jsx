@@ -1,13 +1,10 @@
 import css from "./index.module.css";
 import CamperItem from "./Camper";
-import { useAppSelector } from "../../app/hooks";
-import { getCampers } from "../../app/selectors";
 import { useState } from "react";
 import { Modal } from "../Modal";
 import CamperItemDetails from "./CamperDetails";
 
-export default function CamperList() {
-  const campers = useAppSelector(getCampers);
+export default function CamperList({ campers }) {
   const [showModalEl, setShowModalEl] = useState(null);
 
   const toggleModal = (el) => {
