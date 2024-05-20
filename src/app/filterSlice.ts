@@ -5,6 +5,12 @@ export interface Filter {
   filterEquipment: Array<Equipment>;
   filterType: Array<Type>;
   filterLocation: string;
+  pagination: Pagination;
+}
+
+export interface Pagination {
+  page: number;
+  perPage: number;
 }
 
 export interface Equipment {
@@ -80,30 +86,40 @@ const filterInitialState: Filter = {
   filterEquipment,
   filterType,
   filterLocation: "",
+  pagination: {
+    page: 1,
+    perPage: 4,
+  },
 };
 
 export const filterSlice = createSlice({
   name: "filter",
   initialState: filterInitialState,
   reducers: {
-    //TODO: could combine
+    nextPage: (state) => {
+      state.pagination.page++;
+    },
     selectEquipment: (state, action: PayloadAction<string>) => {
       let filter = state.filterEquipment.find(
         (eq) => eq.name === action.payload
       )!;
       filter.isSelected = !filter.isSelected;
+      state.pagination.page = 1;
     },
     selectType: (state, action: PayloadAction<string>) => {
       let filter = state.filterType.find((eq) => eq.name === action.payload)!;
       filter.isSelected = !filter.isSelected;
+      state.pagination.page = 1;
     },
     setLocation: (state, action: PayloadAction<string>) => {
       state.filterLocation = action.payload;
+      state.pagination.page = 1;
     },
   },
 });
 
-export const { selectEquipment, selectType, setLocation } = filterSlice.actions;
+export const { selectEquipment, selectType, setLocation, nextPage } =
+  filterSlice.actions;
 
 export default filterSlice.reducer;
 

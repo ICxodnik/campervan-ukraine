@@ -52,7 +52,7 @@ export default function CamperItem({ el, showModal }) {
           <div className={css.supportingText}>{el.description}</div>
 
           <CategoryList details={el.details} />
-          <button className={css.accentButton} onClick={() => showModal(el)}>
+          <button className="accentButton" onClick={() => showModal(el)}>
             Show more
           </button>
         </div>

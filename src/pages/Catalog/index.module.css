@@ -18,3 +18,11 @@
         flex-direction: column;
     }
 }
+
+.footer {
+    width: 100%;
+    grid-column: 2;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}

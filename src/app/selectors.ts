@@ -1,9 +1,15 @@
 import { createSelector } from "@reduxjs/toolkit";
 import { RootState } from "./store";
+import { Pagination } from "./filterSlice";
+
+export interface PaginationInfo extends Pagination {
+  hasNextPage: boolean;
+}
 
 const getAllCampers = (state: RootState) => state.campers.items;
 const getFavoritesCampers = (state: RootState) => state.campers.favorite;
 const getFilters = (state: RootState) => state.filter;
+const getPagination = (state: RootState) => state.filter.pagination;
 
 export const getCampers = createSelector(
   [getAllCampers, getFavoritesCampers],
@@ -17,7 +23,7 @@ export const getCampers = createSelector(
   }
 );
 
-export const getFilteredCampers = createSelector(
+const getFilteredCampers = createSelector(
   [getCampers, getFilters],
   (campers, filters) => {
     const types = filters.filterType.filter((f) => f.isSelected);
@@ -59,6 +65,24 @@ export const getFilteredCampers = createSelector(
     }
 
     return campers;
+  }
+);
+
+export const getPaginatedCampers = createSelector(
+  [getFilteredCampers, getPagination],
+  (campers, pagination) => {
+    return campers.slice(0, pagination.perPage * pagination.page);
+  }
+);
+
+export const getPaginatedInfo = createSelector(
+  [getFilteredCampers, getPagination],
+  (campers, pagination) => {
+    return {
+      page: pagination.page,
+      hasNextPage: campers.length - pagination.perPage * pagination.page > 0,
+      perPage: pagination.perPage,
+    } satisfies PaginationInfo;
   }
 );
 

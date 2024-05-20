@@ -21,6 +21,7 @@ const camperConfig = {
 
 const filterConfig = {
   key: "filters",
+  blacklist: ["pagination"],
   storage,
 };
 
