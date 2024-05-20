@@ -51,10 +51,17 @@ const loadAction = createAsyncThunk<Camper[]>("campers", async () => {
 });
 
 export const camperSlice = createSlice({
-  name: "filter",
+  name: "camper",
   initialState,
   reducers: {
-    toggleFavorite(state, action) {},
+    toggleFavorite(state, action) {
+      let favIndex = state.favorite.findIndex((fav) => fav === action.payload);
+      if (favIndex > -1) {
+        state.favorite.splice(favIndex, 1);
+      } else {
+        state.favorite.push(action.payload);
+      }
+    },
   },
   extraReducers(builder) {
     builder.addCase(loadAction.pending, (state) => {
