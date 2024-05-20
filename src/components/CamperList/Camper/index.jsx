@@ -1,7 +1,7 @@
 import CategoryList from "../../CategoryList";
 import css from "./index.module.css";
 
-export default function CamperItem({ el }) {
+export default function CamperItem({ el, showModal }) {
   return (
     <div className={css.card}>
       <div className={css.cardContent}>
@@ -42,7 +42,9 @@ export default function CamperItem({ el }) {
           <div className={css.supportingText}>{el.description}</div>
 
           <CategoryList details={el.details} />
-          <button className={css.accentButton}>Show more</button>
+          <button className={css.accentButton} onClick={() => showModal(el)}>
+            Show more
+          </button>
         </div>
       </div>
     </div>
