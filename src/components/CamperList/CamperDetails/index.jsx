@@ -46,6 +46,7 @@ export default function CamperItemDetails({ el }) {
         </div>
         <div className={css.supportingText}>
           {el.description.slice(0, showAll ? el.description.length : maxSize)}
+          {showAll || "..."}
         </div>
         {!showAll && (
           <div className={css.showMore} onClick={() => setShowAll(true)}>
