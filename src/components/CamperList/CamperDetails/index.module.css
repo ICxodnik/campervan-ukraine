@@ -104,8 +104,15 @@ img {
 }
 
 .featuresTab {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+    padding-top: 44px;
+}
+
+.leftTab {
     display: flex;
     flex-direction: column;
     gap: 44px;
-    width: 100%;
 }

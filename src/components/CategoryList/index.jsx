@@ -2,8 +2,8 @@ import { useState } from "react";
 import CategoryItem from "./CategoryItem";
 import css from "./index.module.css";
 
-export default function CategoryList({ details }) {
-  const [showAll, setShowAll] = useState(false);
+export default function CategoryList({ details, toShowAll }) {
+  const [showAll, setShowAll] = useState(toShowAll ?? false);
   const maxCount = 7;
   const showAllCount = -1;
 

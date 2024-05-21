@@ -42,8 +42,10 @@ export default function CamperItemDetails({ el }) {
         </div>
         <div className={css.supportingText}>{el.description}</div>
         <div className={css.featuresTab}>
-          <CategoryList details={el.details} />
-          <Features data={el.params}></Features>
+          <div className={css.leftTab}>
+            <CategoryList details={el.details} toShowAll />
+            <Features data={el.params}></Features>
+          </div>
           <ReviewList data={el.reviews}></ReviewList>
         </div>
       </div>
