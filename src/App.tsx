@@ -1,16 +1,16 @@
-import React, { Suspense, useEffect } from "react";
-// import { Counter } from './features/counter/Counter';
+import { Suspense, lazy, useEffect } from "react";
 import { Routes, Route, NavLink, Navigate, Link } from "react-router-dom";
-import "./App.css";
 import Loader from "./components/Loader";
-import Home from "./pages/Home";
-import Catalog from "./pages/Catalog";
-import Favorites from "./pages/Favorites";
 import { useAppDispatch } from "./app/hooks";
 import { loadAction } from "./app/camperSlice";
+import "./App.css";
 
 function App() {
   const dispatch = useAppDispatch();
+
+  const Home = lazy(() => import("./pages/Home"));
+  const Catalog = lazy(() => import("./pages/Catalog"));
+  const Favorites = lazy(() => import("./pages/Favorites"));
 
   useEffect(() => {
     dispatch(loadAction());
