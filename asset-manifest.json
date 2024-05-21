@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/campervan-ukraine/static/css/main.f0ad8572.css",
-    "main.js": "/campervan-ukraine/static/js/main.0d73f908.js",
+    "main.js": "/campervan-ukraine/static/js/main.5dfa7cf2.js",
     "static/css/421.07b34ffd.chunk.css": "/campervan-ukraine/static/css/421.07b34ffd.chunk.css",
     "static/js/421.da29e7ef.chunk.js": "/campervan-ukraine/static/js/421.da29e7ef.chunk.js",
     "static/css/367.d740b772.chunk.css": "/campervan-ukraine/static/css/367.d740b772.chunk.css",
@@ -9,10 +9,10 @@
     "static/css/270.b53bfdc3.chunk.css": "/campervan-ukraine/static/css/270.b53bfdc3.chunk.css",
     "static/js/270.c091dd50.chunk.js": "/campervan-ukraine/static/js/270.c091dd50.chunk.js",
     "static/js/453.262930c9.chunk.js": "/campervan-ukraine/static/js/453.262930c9.chunk.js",
-    "static/js/825.f69e1edd.chunk.js": "/campervan-ukraine/static/js/825.f69e1edd.chunk.js",
+    "static/js/825.8e4944ca.chunk.js": "/campervan-ukraine/static/js/825.8e4944ca.chunk.js",
     "index.html": "/campervan-ukraine/index.html",
     "main.f0ad8572.css.map": "/campervan-ukraine/static/css/main.f0ad8572.css.map",
-    "main.0d73f908.js.map": "/campervan-ukraine/static/js/main.0d73f908.js.map",
+    "main.5dfa7cf2.js.map": "/campervan-ukraine/static/js/main.5dfa7cf2.js.map",
     "421.07b34ffd.chunk.css.map": "/campervan-ukraine/static/css/421.07b34ffd.chunk.css.map",
     "421.da29e7ef.chunk.js.map": "/campervan-ukraine/static/js/421.da29e7ef.chunk.js.map",
     "367.d740b772.chunk.css.map": "/campervan-ukraine/static/css/367.d740b772.chunk.css.map",
@@ -20,10 +20,10 @@
     "270.b53bfdc3.chunk.css.map": "/campervan-ukraine/static/css/270.b53bfdc3.chunk.css.map",
     "270.c091dd50.chunk.js.map": "/campervan-ukraine/static/js/270.c091dd50.chunk.js.map",
     "453.262930c9.chunk.js.map": "/campervan-ukraine/static/js/453.262930c9.chunk.js.map",
-    "825.f69e1edd.chunk.js.map": "/campervan-ukraine/static/js/825.f69e1edd.chunk.js.map"
+    "825.8e4944ca.chunk.js.map": "/campervan-ukraine/static/js/825.8e4944ca.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f0ad8572.css",
-    "static/js/main.0d73f908.js"
+    "static/js/main.5dfa7cf2.js"
   ]
 }
