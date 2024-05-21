@@ -19,19 +19,22 @@ export interface Camper {
   name: string;
   price: number;
   location: string;
+  description: string;
+  form: "alcove" | "fullyIntegrated" | "panelTruck";
+  galleryUrls: string[];
+  details: CamperDetail[];
+  rating: number;
+  reviews: Review[];
+  params: Params;
+}
+
+interface Params {
   form: "alcove" | "fullyIntegrated" | "panelTruck";
   length: string;
   width: string;
   height: string;
   tank: string;
   consumption: string;
-  description: string;
-
-  galleryUrls: string[];
-
-  details: CamperDetail[];
-  rating: number;
-  reviews: Review[];
 }
 
 interface CamperState {

@@ -1,0 +1,26 @@
+.features {
+
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.data, .value {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+}

@@ -102,3 +102,10 @@ img {
 .supportingText {
     color: var(--gray-color);
 }
+
+.featuresTab {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    width: 100%;
+}

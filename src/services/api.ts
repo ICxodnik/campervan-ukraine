@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Camper, CamperDetail, Review } from "../app/camperSlice";
+import { Params } from "react-router-dom";
 
 const client = axios.create({
   baseURL: process.env.REACT_APP_CAMPER_API,
@@ -14,14 +15,9 @@ export async function fetchCampers(): Promise<Camper[]> {
       name: item.name,
       description: item.description,
       price: item.price,
-      width: item.width,
-      length: item.length,
-      height: item.height,
-      form: item.form,
-      consumption: item.consumption,
-      location: item.location,
-      tank: item.tank,
       rating: item.rating,
+      location: item.location,
+      form: item.form,
       reviews: item.reviews.map((review: any) => {
         return {
           reviewer: review.reviewer_name,
@@ -30,7 +26,14 @@ export async function fetchCampers(): Promise<Camper[]> {
         } satisfies Review;
       }),
       galleryUrls: item.gallery,
-
+      params: {
+        form: item.form,
+        width: item.width,
+        length: item.length,
+        height: item.height,
+        consumption: item.consumption,
+        tank: item.tank,
+      } satisfies Params,
       details: prepareDetails(item),
     } satisfies Camper;
   });

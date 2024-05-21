@@ -1,0 +1,7 @@
+.line {
+    height: 1px;
+    width: 100%;
+    /* collapse margin */
+    margin: 24px 0;
+    background-color: rgba(16, 24, 40, 0.10);
+}

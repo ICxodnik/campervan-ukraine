@@ -1,7 +1,8 @@
 import CategoryList from "../../CategoryList";
+import Features from "./Features";
 import css from "./index.module.css";
 
-export default function CamperItemDetails({ el, showModal }) {
+export default function CamperItemDetails({ el }) {
   return (
     <div className={css.cardContent}>
       <div className={css.header}>
@@ -39,8 +40,10 @@ export default function CamperItemDetails({ el, showModal }) {
           </div>
         </div>
         <div className={css.supportingText}>{el.description}</div>
-
-        <CategoryList details={el.details} />
+        <div className={css.featuresTab}>
+          <CategoryList details={el.details} />
+          <Features data={el.params}></Features>
+        </div>
       </div>
     </div>
   );
