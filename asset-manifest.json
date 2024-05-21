@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/campervan-ukraine/static/css/main.17838edf.css",
+    "main.css": "/campervan-ukraine/static/css/main.dfa5ccb7.css",
     "main.js": "/campervan-ukraine/static/js/main.668ba984.js",
     "static/js/453.262930c9.chunk.js": "/campervan-ukraine/static/js/453.262930c9.chunk.js",
     "index.html": "/campervan-ukraine/index.html",
-    "main.17838edf.css.map": "/campervan-ukraine/static/css/main.17838edf.css.map",
+    "main.dfa5ccb7.css.map": "/campervan-ukraine/static/css/main.dfa5ccb7.css.map",
     "main.668ba984.js.map": "/campervan-ukraine/static/js/main.668ba984.js.map",
     "453.262930c9.chunk.js.map": "/campervan-ukraine/static/js/453.262930c9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.17838edf.css",
+    "static/css/main.dfa5ccb7.css",
     "static/js/main.668ba984.js"
   ]
 }
