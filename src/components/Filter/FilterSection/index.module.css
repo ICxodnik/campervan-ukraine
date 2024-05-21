@@ -14,13 +14,7 @@
     width: 100%;
 }
 
-@media (min-width: 850px) {
-    .filterButtonContainer {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
     .filterButtonContainer {
         grid-template-columns: 1fr 1fr 1fr;
     }
