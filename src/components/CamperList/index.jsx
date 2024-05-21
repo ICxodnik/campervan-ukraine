@@ -12,20 +12,22 @@ export default function CamperList({ campers }) {
     showModalEl ? setShowModalEl(null) : setShowModalEl(el);
   };
 
+  if (!campers.length) {
+    return (
+      <Message
+        level="info"
+        message="Campers by your filters aren't available"
+      />
+    );
+  }
+
   return (
     <>
-      {campers.length > 0 ? (
-        <div className={css.list}>
-          {campers.map((el) => (
-            <CamperItem el={el} key={el.id} showModal={toggleModal} />
-          ))}
-        </div>
-      ) : (
-        <Message
-          level="info"
-          message="Campers by your filters aren't available"
-        />
-      )}
+      <div className={css.list}>
+        {campers.map((el) => (
+          <CamperItem el={el} key={el.id} showModal={toggleModal} />
+        ))}
+      </div>
       {showModalEl && (
         <Modal onClose={() => toggleModal()}>
           <CamperItemDetails
