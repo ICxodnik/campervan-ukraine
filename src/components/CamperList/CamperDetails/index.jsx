@@ -1,6 +1,7 @@
 import CategoryList from "../../CategoryList";
 import Features from "./Features";
 import css from "./index.module.css";
+import ReviewList from "./ReviewList";
 
 export default function CamperItemDetails({ el }) {
   return (
@@ -43,6 +44,7 @@ export default function CamperItemDetails({ el }) {
         <div className={css.featuresTab}>
           <CategoryList details={el.details} />
           <Features data={el.params}></Features>
+          <ReviewList data={el.reviews}></ReviewList>
         </div>
       </div>
     </div>
