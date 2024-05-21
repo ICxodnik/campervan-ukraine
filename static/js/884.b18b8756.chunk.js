@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcampervan_ukraine=self.webpackChunkcampervan_ukraine||[]).push([[884],{903:(a,e,r)=>{r.r(e),r.d(e,{default:()=>t});var s=r(990),n=r(490),c=r(575);const u={favPage:"Favorites_favPage__DUzYH"};var v=r(579);function t(){const a=(0,s.G)(n.LW);return(0,v.jsx)("div",{className:u.favPage,children:(0,v.jsx)(c.A,{campers:a})})}}}]);
+//# sourceMappingURL=884.b18b8756.chunk.js.map

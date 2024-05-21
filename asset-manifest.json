@@ -1,15 +1,29 @@
 {
   "files": {
-    "main.css": "/campervan-ukraine/static/css/main.b58d624c.css",
-    "main.js": "/campervan-ukraine/static/js/main.3513cf73.js",
+    "main.css": "/campervan-ukraine/static/css/main.f0ad8572.css",
+    "main.js": "/campervan-ukraine/static/js/main.ad15d7f2.js",
+    "static/css/421.07b34ffd.chunk.css": "/campervan-ukraine/static/css/421.07b34ffd.chunk.css",
+    "static/js/421.da29e7ef.chunk.js": "/campervan-ukraine/static/js/421.da29e7ef.chunk.js",
+    "static/css/213.ca40e6f1.chunk.css": "/campervan-ukraine/static/css/213.ca40e6f1.chunk.css",
+    "static/js/213.b3f1ee1c.chunk.js": "/campervan-ukraine/static/js/213.b3f1ee1c.chunk.js",
+    "static/css/884.39e8e163.chunk.css": "/campervan-ukraine/static/css/884.39e8e163.chunk.css",
+    "static/js/884.b18b8756.chunk.js": "/campervan-ukraine/static/js/884.b18b8756.chunk.js",
     "static/js/453.262930c9.chunk.js": "/campervan-ukraine/static/js/453.262930c9.chunk.js",
+    "static/js/417.ebf7cef7.chunk.js": "/campervan-ukraine/static/js/417.ebf7cef7.chunk.js",
     "index.html": "/campervan-ukraine/index.html",
-    "main.b58d624c.css.map": "/campervan-ukraine/static/css/main.b58d624c.css.map",
-    "main.3513cf73.js.map": "/campervan-ukraine/static/js/main.3513cf73.js.map",
-    "453.262930c9.chunk.js.map": "/campervan-ukraine/static/js/453.262930c9.chunk.js.map"
+    "main.f0ad8572.css.map": "/campervan-ukraine/static/css/main.f0ad8572.css.map",
+    "main.ad15d7f2.js.map": "/campervan-ukraine/static/js/main.ad15d7f2.js.map",
+    "421.07b34ffd.chunk.css.map": "/campervan-ukraine/static/css/421.07b34ffd.chunk.css.map",
+    "421.da29e7ef.chunk.js.map": "/campervan-ukraine/static/js/421.da29e7ef.chunk.js.map",
+    "213.ca40e6f1.chunk.css.map": "/campervan-ukraine/static/css/213.ca40e6f1.chunk.css.map",
+    "213.b3f1ee1c.chunk.js.map": "/campervan-ukraine/static/js/213.b3f1ee1c.chunk.js.map",
+    "884.39e8e163.chunk.css.map": "/campervan-ukraine/static/css/884.39e8e163.chunk.css.map",
+    "884.b18b8756.chunk.js.map": "/campervan-ukraine/static/js/884.b18b8756.chunk.js.map",
+    "453.262930c9.chunk.js.map": "/campervan-ukraine/static/js/453.262930c9.chunk.js.map",
+    "417.ebf7cef7.chunk.js.map": "/campervan-ukraine/static/js/417.ebf7cef7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b58d624c.css",
-    "static/js/main.3513cf73.js"
+    "static/css/main.f0ad8572.css",
+    "static/js/main.ad15d7f2.js"
   ]
 }
