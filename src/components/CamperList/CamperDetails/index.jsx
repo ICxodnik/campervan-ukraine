@@ -1,9 +1,14 @@
+import { useState } from "react";
 import CategoryList from "../../CategoryList";
 import Features from "./Features";
 import css from "./index.module.css";
 import ReviewList from "./ReviewList";
 
 export default function CamperItemDetails({ el }) {
+  const [showAll, setShowAll] = useState(false);
+  const maxSize = 150;
+  const showAllText = -1;
+
   return (
     <div className={css.cardContent}>
       <div className={css.header}>
@@ -40,7 +45,14 @@ export default function CamperItemDetails({ el }) {
             <img src={el.galleryUrls[2]} alt={el.name} />
           </div>
         </div>
-        <div className={css.supportingText}>{el.description}</div>
+        <div className={css.supportingText}>
+          {el.description.slice(0, showAll ? showAllText : maxSize)}
+        </div>
+        {!showAll && (
+          <div className={css.showMore} onClick={() => setShowAll(true)}>
+            show all ▾
+          </div>
+        )}
         <div className={css.featuresTab}>
           <div className={css.leftTab}>
             <CategoryList details={el.details} toShowAll />
