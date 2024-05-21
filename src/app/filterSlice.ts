@@ -32,7 +32,7 @@ const filterEquipment: Array<Equipment> = [
   {
     keys: ["airConditioner"],
     name: "AC",
-    icon: "ac",
+    icon: "airConditioner",
     isSelected: false,
   },
   {
