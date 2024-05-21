@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 150px;
+  gap: 300px;
 }
 
 .logo {
@@ -21,14 +21,20 @@
   padding: 15px;
 }
 
+.logo:hover,
+.logo:focus {
+  border-color: var(--red-color);
+}
+
 .title {
   font-family: "Poetsen One", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 40px;
-  color: var(--white-color);
+  color: var(--red-color);
   margin-left: 100px;
 }
+
 .bigTitle {
   font-family: "Poetsen One", sans-serif;
   font-weight: 400;
