@@ -7,7 +7,7 @@ export default function Home(props) {
       <div
         className={css.imageWrapper}
         style={{
-          backgroundImage: "url(" + process.env.PUBLIC_URL + "/hero.jpg" + ")",
+          backgroundImage: "url(" + process.env.PUBLIC_URL + "/hero.jpg)",
         }}
       >
         <div className={css.combineTitle}>
