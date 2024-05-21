@@ -7,7 +7,6 @@ import ReviewList from "./ReviewList";
 export default function CamperItemDetails({ el }) {
   const [showAll, setShowAll] = useState(false);
   const maxSize = 150;
-  const showAllText = -1;
 
   return (
     <div className={css.cardContent}>
@@ -46,7 +45,7 @@ export default function CamperItemDetails({ el }) {
           </div>
         </div>
         <div className={css.supportingText}>
-          {el.description.slice(0, showAll ? showAllText : maxSize)}
+          {el.description.slice(0, showAll ? el.description.length : maxSize)}
         </div>
         {!showAll && (
           <div className={css.showMore} onClick={() => setShowAll(true)}>
