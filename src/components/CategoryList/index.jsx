@@ -16,7 +16,7 @@ export default function CategoryList({ details }) {
       </div>
       {!showAll && (
         <div className={css.showMore} onClick={() => setShowAll(true)}>
-          show all
+          show all ▾
         </div>
       )}
     </>
