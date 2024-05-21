@@ -51,7 +51,7 @@
             rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 .selected {
-    border: 1px solid #E44848;
+    border: 1px solid var(--red-color);
 }
 
 .filterButtonText {

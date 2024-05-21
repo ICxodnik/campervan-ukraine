@@ -1,11 +1,20 @@
 @import-normalize;
 
+:root {
+    --dark-color: rgb(16, 24, 40);
+    --gray-color: rgb(71, 84, 103);
+    --red-color: rgb(228, 72, 72);
+    --yellow-color: rgb(255, 197, 49);
+    --darker-white-color: rgb(242, 244, 247);
+    --white-color: rgb(247, 247, 247);
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  color: #101828;
+  color: var(--dark-color);
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -34,6 +43,13 @@ body:has(.overlay) {
 button {
   border: unset;
   cursor: pointer;
+  color: var(--dark-color);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.08px;
 }
 
 .button {
@@ -45,15 +61,11 @@ button {
   border-radius: 200px;
   background: #FFF;
   border: 1px solid rgba(71, 84, 103, 0.20);
+}
 
-  color: #101828;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  /* 150% */
-  letter-spacing: -0.08px;
+.button:hover,
+.button:focus {
+  border: 1px solid var(--red-color);
 }
 
 .accentButton {
@@ -63,16 +75,12 @@ button {
   align-items: center;
   gap: 10px;
   border-radius: 200px;
-  background: #E44848;
+  background: var(--red-color);
+}
 
-  color: #FFF;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  /* 150% */
-  letter-spacing: -0.08px;
+.accentButton:hover,
+.accentButton:focus {
+  background: rgb(216, 67, 67);
 }
 
 code {
@@ -109,7 +117,7 @@ h2 {
 /* TODO */
 svg {
     fill: transparent;
-    stroke: #101828;
+    stroke: var(--dark-color);
     height: 32px;
     width: 32px;
 }

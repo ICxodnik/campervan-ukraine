@@ -18,7 +18,7 @@
 }
 
 .categoriesText {
-    color: #101828;
+    color: var(--dark-color);
     text-align: center;
     font-family: Inter;
     font-size: 16px;

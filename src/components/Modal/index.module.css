@@ -10,7 +10,7 @@
   min-width: 800px;
   width: 910px;
   height: 75vh;
-  background-color: white;
+  background-color: var(--white-color);
 }
 
 .modalHeader {

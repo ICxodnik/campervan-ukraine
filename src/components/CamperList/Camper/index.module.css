@@ -99,6 +99,6 @@ img {
     -webkit-line-clamp: 1;
 
     overflow: hidden;
-    color: #475467;
+    color: var(--gray-color);
     text-overflow: ellipsis;
 }
